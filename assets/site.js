@@ -1,0 +1,2 @@
+var s=document.getElementById("country");function up(v){var p=v.split("|");document.querySelectorAll("[data-usd]").forEach(function(e){e.textContent=p[0]+" "+Math.round(e.dataset.usd*p[1])})}
+try{var sv=localStorage.getItem("cs");if(sv){s.value=sv}}catch(e){}s.value&&up(s.value);s.addEventListener("change",function(){up(s.value);try{localStorage.setItem("cs",s.value)}catch(e){}})
